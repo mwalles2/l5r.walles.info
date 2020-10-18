@@ -27,7 +27,7 @@ let package = Package(
 				.unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
 			]
 		),
-		.target(name: "Run", dependencies: [.target(name: "App")]),
+		.target(name: "info.walles.l5r", dependencies: [.target(name: "App")]),
 		.testTarget(name: "AppTests", dependencies: [
 			.target(name: "App"),
 			.product(name: "XCTVapor", package: "vapor"),

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>#(title)</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+	<div class="container" id="roll">
+    <h1>Roll</h1>
+		<form action="/" method="post" accept-charset="UTF-8">
+#if(error):
+			<h3>Invalid Roll</h3>
+#endif
+			<fieldset>
+				<legend>Roll</legend>
+				<label for="roll">Roll:</label> <input name="roll" type="text" value="#(roll)">
+				<br><label for="keep">Keep:</label> <input name="keep" type="text" value="#(keep)">
+				<br><label for="bonus">Bonus:</label> <input name="bonus" type="text" value="#(bonus)">
+			</fieldset>
+			<fieldset>
+				<legend>Rasies (Coming Soon)</legend>
+				<label for="calledRasies">Called Rasies</label> <input name="calledRasies" type="text" value="#(calledRasies)" disabled>
+				<br><label for="freeRasies">Free Rasies</label> <input name="freeRasies" type="text" value="#(freeRasies)" disabled>
+			</fieldset>
+			<fieldset>
+				<legend>Adjustments</legend>
+				<input type="checkbox" name="emphasis" value="checked"#if(emphasis): checked #endif><label for="emphasis">Emphasis</label>
+				<br><input type="checkbox" name="explode9" value="checked"#if(explode9): checked #endif><label for="explode9">Explode on 9s as well</label>
+			</fieldset>
+			<input type="submit" value="Roll!" />
+		</form>
+	</div>
+	<div class="container" id="description">
+		<h1>Result:</h1>
+#if(description != nil):
+		<div class="total">#(description.rollValue)</div>
+		<div class="diceRolled">#(description.diceRolled)</div>
+		<div class="explanation">#(description.rollExplanation)</div>
+#endif
+	</div>
+  </body>
+</html>

@@ -36,7 +36,7 @@ final class DiceRollController {
 		if let roll = Int(diceRoll.roll),
 		   let keep = Int(diceRoll.keep),
 		   let bonus = toInt(diceRoll.bonus),
-		   roll > keep {
+		   roll >= keep {
 			error = false
 			let rollValue = RollAndKeepRoll(name: "Unnamed",
 											 roll: roll,

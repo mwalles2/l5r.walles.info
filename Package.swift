@@ -10,7 +10,7 @@ let package = Package(
 		// 💧 A server-side Swift web framework.
 		.package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
 		.package(url: "https://github.com/vapor/leaf.git", from: "4.0.0-rc"),
-		.package(url: "git@gitlab.com:mwalles/RollAndKeepSystem.git", from: "1.0.0-alpha")
+		.package(url: "git@github.com:mwalles2/RollAndKeepSystem.git", from: "1.0.0-alpha")
 	],
 	targets: [
 		.target(
